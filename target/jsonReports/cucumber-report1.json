@@ -1,0 +1,115 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2023-11-23T11:34:38.848Z",
+        "line": 15,
+        "name": "Verify campaign is being successfully added using create Campaign api",
+        "description": "",
+        "id": "validating-campaign-api;verify-campaign-is-being-successfully-added-using-create-campaign-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 660675600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Create campaign payload with \"test-archana-campaign-automation-1112\" \"2023-12-01\"  \"2023-12-06\"  \"Stop\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test-archana-campaign-automation-1112\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"2023-12-01\"",
+                  "offset": 69
+                },
+                {
+                  "val": "\"2023-12-06\"",
+                  "offset": 83
+                },
+                {
+                  "val": "\"Stop\"",
+                  "offset": 97
+                }
+              ],
+              "location": "stepDefinations.stepDefination.create_campaign_payload_with(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"io.restassured.response.Response.getStatusCode()\" because \"this.response\" is null\r\n\tat stepDefinations.stepDefination.api_Call_got_success_with_status_code(stepDefination.java:63)\r\n\tat ✽.API Call got success with status code 200(file:///C:/Users/archana.b/eclipse-workspace/CMS/src/test/java/features/Campaign.feature:8)\r\n",
+              "duration": 997900,
+              "status": "failed"
+            },
+            "line": 8,
+            "name": "API Call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "stepDefinations.stepDefination.api_Call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "\"status\" in response body is \"success\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"success\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinations.stepDefination.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "verify campaign id created maps to \"test-archana-campaign-automation-1112\" using \"GetCampaign\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test-archana-campaign-automation-1112\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"GetCampaign\"",
+                  "offset": 81
+                }
+              ],
+              "location": "stepDefinations.stepDefination.verify_campaign_id_created_maps_to_using(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Campaign API",
+    "description": "",
+    "id": "validating-campaign-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Campaign.feature",
+    "tags": []
+  }
+]
